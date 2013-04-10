@@ -8,6 +8,11 @@ defmodule Elixirling.Mixfile do
       compilers: [:elixir, :dynamo, :app],
       env: [prod: [compile_path: "ebin"]],
       compile_path: "tmp/#{Mix.env}/elixirling/ebin",
+	  lingex_opts: [build_host: "build.erlangonxen.org:8080",
+					username: "test",
+					password: "test",
+					import_lib: :crypto,
+					import: "priv/*/*"],
       deps: deps ]
   end
 
@@ -21,6 +26,6 @@ defmodule Elixirling.Mixfile do
     [ { :ranch, %r(.*), github: "extend/ranch" },
       { :cowboy, %r(.*), github: "extend/cowboy" },
       { :dynamo, "0.1.0.dev", github: "elixir-lang/dynamo" },
-	  { :ling_builder, %r(.*), github: "maximk/ling_builder" } ]
+	  { :lingex, %r(.*), github: "maximk/lingex" } ]
   end
 end
