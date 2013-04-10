@@ -14,6 +14,7 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Dynamo!")
-    render conn, "index.html"
+    # render conn, "index.html"
+	conn.resp(200, "<h1>Hey there, cowboy</h1>")
   end
 end

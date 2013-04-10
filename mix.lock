@@ -2,5 +2,6 @@
   "dynamo": {:git,"https://github.com/elixir-lang/dynamo.git","c61d8550e1c6e9be4d324df9579d711488bd54bf",[]},
   "edown": {:git,"https://github.com/esl/edown.git","35f8296a25d14c5c1e3209399a2c1856700d9d5b",[]},
   "hackney": {:git,"https://github.com/benoitc/hackney.git","2d69d7ce52d06ecc360b104dcb978da3e24ce304",[]},
+  "ling_builder": {:git,"https://github.com/maximk/ling_builder.git","90d5aa2b412a3a33167a2f4983bcf490c0541365",[]},
   "mimetypes": {:git,"https://github.com/spawngrid/mimetypes.git","e9dfab5aec98963589ecf13bdfcf0490667a730d",[]},
   "ranch": {:git,"https://github.com/extend/ranch.git","c3133bfbc324fbb9ac26ab689cd41dc362ad7c05",[]} ]

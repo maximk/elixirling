@@ -20,6 +20,7 @@ defmodule Elixirling.Mixfile do
   defp deps do
     [ { :ranch, %r(.*), github: "extend/ranch" },
       { :cowboy, %r(.*), github: "extend/cowboy" },
-      { :dynamo, "0.1.0.dev", github: "elixir-lang/dynamo" } ]
+      { :dynamo, "0.1.0.dev", github: "elixir-lang/dynamo" },
+	  { :ling_builder, %r(.*), github: "maximk/ling_builder" } ]
   end
 end
