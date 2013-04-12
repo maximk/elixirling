@@ -1,0 +1,21 @@
+<domain type='xen'>
+  <name>elixirling</name>
+  <memory unit='KiB'>524288</memory>
+  <currentMemory unit='KiB'>524288</currentMemory>
+  <vcpu>1</vcpu>
+  <bootloader></bootloader>
+  <os>
+    <type>linux</type>
+    <kernel>/root/images/elixirling.img</kernel>
+	<cmdline>-ipaddr 192.168.0.4 -netmask 255.255.255.0 -gateway 192.168.0.1 -root /erlang -pz /elixirling/tmp/dev/elixirling/ebin -pz /elixirling/deps/cowboy/ebin -pz /elixirling/deps/ranch/ebin -pz /elixirling/deps/dynamo/ebin -pz /elixirling/deps/mimetypes/ebin -home /elixirling</cmdline>
+  </os>
+  <clock offset='utc' adjustment='reset'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <devices>
+    <interface type='ethernet'>
+      <script path='/etc/xen/scripts/vif-bridge'/>
+    </interface>
+  </devices>
+</domain>
