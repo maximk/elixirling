@@ -1,6 +1,6 @@
 # Elixirling
 
-This is a project built with Elixir that uses Dynamo to serve web requests.
+This is a _sample_ project built with Elixir that uses Dynamo to serve web requests.
 
 Resources:
 
