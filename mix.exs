@@ -11,7 +11,7 @@ defmodule Elixirling.Mixfile do
 	  lingex_opts: [build_host: "build.erlangonxen.org:8080",
 					username: "test",
 					password: "test",
-					import_lib: :crypto,
+					import_lib: "crypto",
 					import: "priv/*/*"],
       deps: deps ]
   end

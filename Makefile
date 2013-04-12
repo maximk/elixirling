@@ -1,14 +1,14 @@
 
 PROJ_NAME := elixirling
 
-.PHONY: default
-
 me:
-	rebar ling-build-image
+	mix
+	mix lingex.build_image
 	rsync vmling dom0::images/$(PROJ_NAME).img
 
 em:
-	rebar ling-build-image
+	mix
+	mix lingex.build_image
 	rsync vmling dom0::images/$(PROJ_NAME).img
 
 start:
