@@ -29,7 +29,9 @@ library files.
 	  [ ...
 	    lingex_opts: [ build_host: "build.erlangonxen.org:8080",
 					   username: "test",
-					   password: "test" ]
+					   password: "test",
+					   import_lib: "syntax_tools",
+					   elixir_lib: true ]
 		... ]
 	end
 
@@ -41,10 +43,23 @@ documentation.
 1. Run mix lingex.build\_image. This will archive all \*.beam files of your
 project and submit them to the build service.
 
-1. The build process will complete in about 30s. An image file called 'vmling'
-will appear in the current directory. The file contains LING VM, your project
-code and is ready to boot as a Xen guest.
+1. The build process will complete in about 40s. An image file called 'vmling'
+will appear in the current directory. The file contains LING VM, Elixir
+libraries, your project code and is ready to boot as a Xen guest.
 
-A couple configuration steps are needed to automatically start the Elixir
-project when the image boots. This should be covered by a separate tutorial.
+1. Elixir libraries are mounted at /elixir/lib/iex/ebin and similar locations.
+You may want to add these locations to your path using command line parameters,
+such as '-pz /elixir/lib/iex/ebin'.
+
+1. After you project image boots up, you may switch to the Elixir shell by
+pressing Ctrl-G and typing
+
+	---> s 'Elixir-IEx'
+	---> c
+
+Now try the following command:
+
+	iex> IO.puts("Elixir runs on #{inspect :erlang.system_info(:machine)}")
+
+Elixir indeed runs on LING VM now.
 
