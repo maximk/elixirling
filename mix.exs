@@ -12,7 +12,7 @@ defmodule Elixirling.Mixfile do
 					username: "test",
 					password: "test",
 					import_lib: "syntax_tools",
-					import: "elixir_lib/*/ebin/*",
+					elixir_lib: true,
 					import: "priv/*/*"],
       deps: deps ]
   end

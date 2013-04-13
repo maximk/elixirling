@@ -20,6 +20,9 @@ the free Erlang on Xen Build Service.
 1. Run mix deps.get to update your dependencies. This adds a few custom tasks
 to the mix tool (lingex.build, lingex.image, and lingex.buildi\_image)
 
+1. Create a link in the project directory to the directory that contains Elixir
+library files.
+
 1. Set lingex options. Add the following lines to your mix.exs file:
 
 	def project do
