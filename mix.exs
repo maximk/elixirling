@@ -8,10 +8,11 @@ defmodule Elixirling.Mixfile do
       compilers: [:elixir, :dynamo, :app],
       env: [prod: [compile_path: "ebin"]],
       compile_path: "tmp/#{Mix.env}/elixirling/ebin",
-	  lingex_opts: [build_host: "192.168.0.3:8080",
+	  lingex_opts: [build_host: "build.erlangonxen.org:8080",
 					username: "test",
 					password: "test",
-					import_lib: "crypto",
+					import_lib: "syntax_tools",
+					import: "elixir_lib/*/ebin/*",
 					import: "priv/*/*"],
       deps: deps ]
   end

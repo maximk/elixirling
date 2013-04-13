@@ -7,7 +7,7 @@
   <os>
     <type>linux</type>
     <kernel>/root/images/elixirling.img</kernel>
-	<cmdline>-ipaddr 192.168.0.4 -netmask 255.255.255.0 -gateway 192.168.0.1 -root /erlang -pz /elixirling/tmp/dev/elixirling/ebin -pz /elixirling/deps/cowboy/ebin -pz /elixirling/deps/ranch/ebin -pz /elixirling/deps/dynamo/ebin -pz /elixirling/deps/mimetypes/ebin -home /elixirling</cmdline>
+	<cmdline>-dhcp -root /erlang -pz /elixirling/tmp/dev/elixirling/ebin -pz /elixirling/deps/cowboy/ebin -pz /elixirling/deps/ranch/ebin -pz /elixirling/deps/dynamo/ebin -pz /elixirling/deps/mimetypes/ebin -pz /elixirling/elixir_lib/elixir/ebin -pz /elixirling/elixir_lib/iex/ebin -pz /elixirling/elixir_lib/eex/ebin -home /elixirling</cmdline>
   </os>
   <clock offset='utc' adjustment='reset'/>
   <on_poweroff>destroy</on_poweroff>

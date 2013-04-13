@@ -4,6 +4,6 @@
   "exjson": {:git,"https://github.com/guedes/exjson.git","b84686310bc2b8471b7f9617de3602d4717106d1",[]},
   "hackney": {:git,"https://github.com/benoitc/hackney.git","2d69d7ce52d06ecc360b104dcb978da3e24ce304",[]},
   "ling_builder": {:git,"https://github.com/maximk/ling_builder.git","90d5aa2b412a3a33167a2f4983bcf490c0541365",[]},
-  "lingex": {:git,"https://github.com/maximk/lingex.git","9cd8912a07bbeebecd8960ebb077f5380101337b",[]},
+  "lingex": {:git,"https://github.com/maximk/lingex.git","40b51978472e7d8fd7f8e92648463b86c823d024",[]},
   "mimetypes": {:git,"https://github.com/spawngrid/mimetypes.git","e9dfab5aec98963589ecf13bdfcf0490667a730d",[]},
   "ranch": {:git,"https://github.com/extend/ranch.git","c3133bfbc324fbb9ac26ab689cd41dc362ad7c05",[]} ]
