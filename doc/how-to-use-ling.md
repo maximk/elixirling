@@ -2,7 +2,7 @@
 # How to create a Xen image for an Elixir project
 
 Elixir has Erlang underneath, all the way down. Thus an Elixir project can run
-not only on standard Erlang VM, but on its &ldquo;OS-less&rdquo; counterpart
+not only on a standard Erlang VM, but on its &ldquo;OS-less&rdquo; counterpart
 called LING VM. LING VM is the core technology of Erlang on Xen -
 [erlangonxen.org](http://erlangonxen.org).
 
@@ -18,7 +18,7 @@ the free Erlang on Xen Build Service.
 	end
 
 1. Run mix deps.get to update your dependencies. This adds a few custom tasks
-to the mix tool (lingex.build, lingex.image, and lingex.build_image)
+to the mix tool (lingex.build, lingex.image, and lingex.buildi\_image)
 
 1. Set lingex options. Add the following lines to your mix.exs file:
 
@@ -30,16 +30,16 @@ to the mix tool (lingex.build, lingex.image, and lingex.build_image)
 		... ]
 	end
 
-You may register with the build service
+1. Optionally, you may register with the build service
 [here](http://build.erlangonxen.org/register) and update the credentials
 accordingly. For the complete list of recognized options see the build service
 documentation.
 
-1. Run mix lingex.build_image. This will archive all *.beam files of your
+1. Run mix lingex.build\_image. This will archive all \*.beam files of your
 project and submit them to the build service.
 
-1. The build process will complete after about 30s. A file called 'vmling' will
-appear in the current directory. The image file contains LING VM, your project
+1. The build process will complete in about 30s. An image file called 'vmling'
+will appear in the current directory. The file contains LING VM, your project
 code and is ready to boot as a Xen guest.
 
 A couple configuration steps are needed to automatically start the Elixir
